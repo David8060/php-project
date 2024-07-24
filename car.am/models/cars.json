@@ -1,0 +1,51 @@
+{
+    "0": {
+        "make": "audi",
+        "model": "7-series",
+        "year": "2025",
+        "price": "5645646",
+        "image": "..\/uploads\/7-series.jpg"
+    },
+    "1": {
+        "make": "bmw",
+        "model": "7-series",
+        "year": "2024",
+        "price": "5645",
+        "image": "..\/uploads\/7-series.jpg"
+    },
+    "3": {
+        "make": "Porsche",
+        "model": "Panamera",
+        "year": "2020",
+        "price": "70000",
+        "image": "..\/uploads\/panamera.jpg"
+    },
+    "6": {
+        "make": "Porsche ",
+        "model": "taycan",
+        "year": "2025",
+        "price": "5645",
+        "image": "..\/uploads\/7-series.jpg"
+    },
+    "7": {
+        "make": "bmw",
+        "model": "efef",
+        "year": "2011",
+        "price": "20111",
+        "image": "..\/uploads\/7-series.jpg"
+    },
+    "8": {
+        "make": "bmw",
+        "model": "7-series",
+        "year": "2012",
+        "price": "5645646",
+        "image": "..\/uploads\/7-series.jpg"
+    },
+    "9": {
+        "make": "zap",
+        "model": "7-series",
+        "year": "2021",
+        "price": "5645646",
+        "image": "..\/uploads\/7-series.jpg"
+    }
+}
