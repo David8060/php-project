@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.3.1, created on 2024-07-23 15:07:46
+/* Smarty version 5.3.1, created on 2024-08-23 12:09:21
   from 'file:index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.3.1',
-  'unifunc' => 'content_669fab22a43924_16634478',
+  'unifunc' => 'content_66c85fd1e57316_82575365',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd3145ead1bff0eb7828b5af07855399f8ab4dd2f' => 
     array (
       0 => 'index.tpl',
-      1 => 1721740046,
+      1 => 1724407713,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_669fab22a43924_16634478 (\Smarty\Template $_smarty_tpl) {
+function content_66c85fd1e57316_82575365 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\xampp\\htdocs\\php-project\\car.am\\templates';
 ?><!-- templates/index.tpl -->
 <!DOCTYPE html>
@@ -48,7 +48,7 @@ $foreach0DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('car')->value) {
 $foreach0DoElse = false;
 ?>
-                <div class='car-item' data-index='<?php echo $_smarty_tpl->getValue('car')['idcar_items'];?>
+                <div class='car-item' data-index='<?php echo $_smarty_tpl->getValue('car')['id'];?>
 '>
                     <h3><?php echo $_smarty_tpl->getValue('car')['make'];?>
  <?php echo $_smarty_tpl->getValue('car')['model'];?>
@@ -62,11 +62,11 @@ $foreach0DoElse = false;
  <?php echo $_smarty_tpl->getValue('car')['model'];?>
 '>
                     <form action='Edit.php' method='GET'>
-                        <input type='hidden' name='edit' value='<?php echo $_smarty_tpl->getValue('car')['idcar_items'];?>
+                        <input type='hidden' name='edit' value='<?php echo $_smarty_tpl->getValue('car')['id'];?>
 '>
                         <button class='edit-btn' type='submit'>Edit</button>
                     </form>
-                    <button class='delete-btn' data-index='<?php echo $_smarty_tpl->getValue('car')['idcar_items'];?>
+                    <button class='delete-btn' data-index='<?php echo $_smarty_tpl->getValue('car')['id'];?>
 '>Delete</button>
                 </div>
             <?php

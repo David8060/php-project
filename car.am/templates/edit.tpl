@@ -17,7 +17,7 @@
     </header>
     <main>
         <form id="edit-car-form" action="Edit.php" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="edit" value="{$idcar_items}" >
+            <input type="hidden" name="edit" value="{$id}" >
             <label for="make">Make:</label>
             <input type="text" id="make" name="make" value="{$make}" required>
             <label for="model">Model:</label>

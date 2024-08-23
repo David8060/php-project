@@ -83,7 +83,7 @@ $(document).ready(function() {
         ajaxHelper({
             url: 'index.php',
             data: { delete: id },
-            success: removeItem(index),
+            success: removeItem(id),
             error: handleError()
         });
     });

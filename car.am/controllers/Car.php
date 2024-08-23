@@ -49,7 +49,7 @@ class Car {
     }
 
     public function deleteCar($id) {
-        $sql = "DELETE FROM car_items WHERE idcar_items = :id";
+        $sql = "DELETE FROM car_items WHERE id = :id";
         try {
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -60,7 +60,7 @@ class Car {
     }
 
 public function updateCar($id, CarAttributes $attributes) {
-    $sql = "UPDATE car_items SET make = :make, model = :model, year = :year, price = :price, image = :image WHERE idcar_items = :id";
+    $sql = "UPDATE car_items SET make = :make, model = :model, year = :year, price = :price, image = :image WHERE id = :id";
     try {
         $stmt = $this->conn->prepare($sql);
 
@@ -87,7 +87,7 @@ public function updateCar($id, CarAttributes $attributes) {
 }
 
     public function getCarById($id) {
-        $sql = "SELECT * FROM car_items WHERE idcar_items = :id";
+        $sql = "SELECT * FROM car_items WHERE id = :id";
         try {
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);

@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['edit'])) {
         $carAttributes->setPrice($car['price']);
         $carAttributes->setImage($car['image']);
 
-        $smarty->assign('idcar_items', $car['idcar_items']);
+        $smarty->assign('id', $car['id']);
         $smarty->assign('make', $carAttributes->getMake());
         $smarty->assign('model', $carAttributes->getModel());
         $smarty->assign('year', $carAttributes->getYear());

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.3.1, created on 2024-07-23 16:14:26
+/* Smarty version 5.3.1, created on 2024-08-23 11:48:29
   from 'file:edit.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.3.1',
-  'unifunc' => 'content_669fbac2ba37f7_38335263',
+  'unifunc' => 'content_66c85aede2a913_76714882',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2f6610fca5901962ea43bbe529aa721e83e4f105' => 
     array (
       0 => 'edit.tpl',
-      1 => 1721744055,
+      1 => 1724406401,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_669fbac2ba37f7_38335263 (\Smarty\Template $_smarty_tpl) {
+function content_66c85aede2a913_76714882 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\xampp\\htdocs\\php-project\\car.am\\templates';
 ?><!-- templates/edit.tpl -->
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ $_smarty_current_dir = 'C:\\xampp\\htdocs\\php-project\\car.am\\templates';
     </header>
     <main>
         <form id="edit-car-form" action="Edit.php" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="edit" value="<?php echo $_smarty_tpl->getValue('idcar_items');?>
+            <input type="hidden" name="edit" value="<?php echo $_smarty_tpl->getValue('id');?>
 " >
             <label for="make">Make:</label>
             <input type="text" id="make" name="make" value="<?php echo $_smarty_tpl->getValue('make');?>
