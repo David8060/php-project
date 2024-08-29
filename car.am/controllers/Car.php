@@ -2,11 +2,11 @@
 require_once '../models/CarAttributes.php';
 
 class Car {
- private $host = "localhost";
+    private $host = "mysql_db";
     private $dbname = "cars_schema";
     private $username = "root";
     private $password = "zxcft741012";
-    private $port = "3650"; 
+    private $port = "3306"; 
     private $dsn;
     private $conn;
 
@@ -37,11 +37,16 @@ class Car {
         $sql = "INSERT INTO car_items (make, model, year, price, image) VALUES (:make, :model, :year, :price, :image)";
         try {
             $stmt = $this->conn->prepare($sql);
-            $stmt->bindParam(':make', $attributes->getMake());
-            $stmt->bindParam(':model', $attributes->getModel());
-            $stmt->bindParam(':year', $attributes->getYear());
-            $stmt->bindParam(':price', $attributes->getPrice());
-            $stmt->bindParam(':image', $attributes->getImage());
+            $make = $attributes->getMake();
+            $model = $attributes->getModel();
+            $year = $attributes->getYear();
+            $price = $attributes->getPrice();
+            $image = $attributes->getImage();
+            $stmt->bindParam(':make', $make);
+            $stmt->bindParam(':model', $model);
+            $stmt->bindParam(':year', $year);
+            $stmt->bindParam(':price', $price);
+            $stmt->bindParam(':image', $image);
             $stmt->execute();
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -59,32 +64,26 @@ class Car {
         }
     }
 
-public function updateCar($id, CarAttributes $attributes) {
-    $sql = "UPDATE car_items SET make = :make, model = :model, year = :year, price = :price, image = :image WHERE id = :id";
-    try {
-        $stmt = $this->conn->prepare($sql);
-
-        // Assign attribute values to variables
-        $make = $attributes->getMake();
-        $model = $attributes->getModel();
-        $year = $attributes->getYear();
-        $price = $attributes->getPrice();
-        $image = $attributes->getImage();
-
-        // Bind parameters using variables
-        $stmt->bindParam(':make', $make);
-        $stmt->bindParam(':model', $model);
-        $stmt->bindParam(':year', $year, PDO::PARAM_INT);
-        $stmt->bindParam(':price', $price);
-        $stmt->bindParam(':image', $image);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-
-        // Execute the statement
-        $stmt->execute();
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+    public function updateCar($id, CarAttributes $attributes) {
+        $sql = "UPDATE car_items SET make = :make, model = :model, year = :year, price = :price, image = :image WHERE id = :id";
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $make = $attributes->getMake();
+            $model = $attributes->getModel();
+            $year = $attributes->getYear();
+            $price = $attributes->getPrice();
+            $image = $attributes->getImage();
+            $stmt->bindParam(':make', $make);
+            $stmt->bindParam(':model', $model);
+            $stmt->bindParam(':year', $year, PDO::PARAM_INT);
+            $stmt->bindParam(':price', $price);
+            $stmt->bindParam(':image', $image);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
     }
-}
 
     public function getCarById($id) {
         $sql = "SELECT * FROM car_items WHERE id = :id";
@@ -99,3 +98,4 @@ public function updateCar($id, CarAttributes $attributes) {
         }
     }
 }
+?>

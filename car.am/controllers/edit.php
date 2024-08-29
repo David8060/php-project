@@ -60,14 +60,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit'])) {
         }
     }
 
-    // Update car attributes
     $carAttributes->setMake($make);
     $carAttributes->setModel($model);
     $carAttributes->setYear($year);
     $carAttributes->setPrice($price);
     $carAttributes->setImage($imagePath);
     
-    // Update car in the database
     $carObj->updateCar($id, $carAttributes);
     header("Location: index.php");
 

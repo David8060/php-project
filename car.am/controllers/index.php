@@ -17,7 +17,7 @@ $cars = $carObj->getCars();
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
     $id = $_POST['delete'];
     $carObj->deleteCar($id);
-    echo json_encode(['success' => true]); // Respond with success status
+    echo json_encode(['success' => true]);
     exit();
 }
 
